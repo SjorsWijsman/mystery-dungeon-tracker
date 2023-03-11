@@ -59,7 +59,7 @@
 			{#each headers as header}
 				<td>
 					{#if header.link}
-						<Link href="../pokedex/{item.id}">
+						<Link path="pokedex/{item.id}">
 							{item[header.column]}
 						</Link>
 					{:else if header.column === 'type'}

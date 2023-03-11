@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	export let types = [];
 
 	types = [types].flat();
@@ -7,7 +8,7 @@
 <div>
 	{#if types && types.length > 0}
 		{#each types as type}
-			<a href="../types/{type}" style:--color={`var(--color-${type})`}>
+			<a href="{base}/types/{type}" style:--color={`var(--color-${type})`}>
 				{type}
 			</a>
 		{/each}

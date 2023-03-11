@@ -51,6 +51,7 @@ main {
 	padding-top: 3rem;
 	padding-bottom: 32rem;
 	background-color: var(--color);
+	max-width: 60rem;
 }
 
 /* Headers */

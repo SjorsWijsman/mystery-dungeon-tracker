@@ -12,13 +12,13 @@
 	<nav>
 		<ul>
 			<li>
-				<Link href={`/`} icon={faHome} />
+				<Link path={''} icon={faHome} />
 			</li>
 			<li>
-				<Link href={`/pokedex`}>Pokédex</Link>
+				<Link path={`pokedex`}>Pokédex</Link>
 			</li>
 			<li>
-				<Link href={`/types`}>Types</Link>
+				<Link path={`types`}>Types</Link>
 			</li>
 		</ul>
 	</nav>
