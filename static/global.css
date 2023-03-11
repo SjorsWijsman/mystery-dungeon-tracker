@@ -1,0 +1,80 @@
+html {
+	font-size: max(12px, calc(60% + 0.3vmin));
+	--color-white: #fff;
+	--color-black-dark: #131316;
+	--color-black: #1c1c21;
+	--color-black-transparent: #1c1c21e7;
+	--color-black-light: #26262b;
+	--color-normal: #a8a77a;
+	--color-fire: #ee8130;
+	--color-water: #6390f0;
+	--color-grass: #7ac74c;
+	--color-electric: #f7d02c;
+	--color-ice: #96d9d6;
+	--color-fighting: #c22e28;
+	--color-poison: #a33ea1;
+	--color-ground: #e2bf65;
+	--color-flying: #a98ff3;
+	--color-psychic: #f95587;
+	--color-bug: #a6b91a;
+	--color-rock: #b6a136;
+	--color-ghost: #735797;
+	--color-dragon: #6f35fc;
+	--color-dark: #705746;
+	--color-steel: #b7b7ce;
+	--font-main: 'Alexandria', sans-serif;
+	--font-mono: 'Space Mono', monospace;
+}
+
+:root {
+	background-color: var(--color-black);
+}
+
+* {
+	color: var(--color-white);
+	font-family: var(--font-main);
+	font-weight: 300;
+	font-size: 1rem;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+}
+
+/* Sections */
+main {
+	--color: var(--color-black);
+	margin: 0 auto;
+	padding: 2rem;
+	padding-top: 3rem;
+	padding-bottom: 32rem;
+	background-color: var(--color);
+}
+
+/* Headers */
+h1 {
+	font-size: 2.2rem;
+	font-weight: 600;
+	margin: 0.5em 0;
+}
+
+h2 {
+	font-weight: 400;
+	font-size: 1.6rem;
+	margin: 0.5rem 0;
+	margin-top: 3rem;
+}
+
+h2 span {
+	font-size: 1em;
+	opacity: 0.8;
+}
+
+h3 {
+	font-size: 1rem;
+	opacity: 0.5;
+	margin: 0;
+	font-weight: 300;
+}
