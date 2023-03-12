@@ -4,7 +4,7 @@
 	export let types = [];
 	export let showPlaceholder = false;
 
-	types = [types].flat();
+	$: types = [types].flat();
 </script>
 
 <div>

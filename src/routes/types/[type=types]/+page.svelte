@@ -1,22 +1,60 @@
 <script>
 	import TablePokemon from '$lib/components/TablePokemon.svelte';
 	import Type from '$lib/components/Type.svelte';
+	import Table from '$lib/components/Table.svelte';
+	import { typeList } from '$lib/data/types';
 	import { page } from '$app/stores';
 	import { pageColor } from '$lib/store';
+	import {
+		faAngleDoubleDown,
+		faAngleDown,
+		faAngleUp,
+		faBolt
+	} from '@fortawesome/free-solid-svg-icons';
 
 	export let data;
 
 	$: $pageColor = [`--color-${$page.params.type}`];
 
+	let type;
+
+	$: type = $page.params.type;
+
 	let pokemonList;
 
 	$: pokemonList = data.pokemonList;
+
+	const headers = [
+		{
+			column: 'superEffective',
+			title: 'Super Effective (1.7x)',
+			type: 'type',
+			icon: faAngleUp
+		},
+		{
+			column: 'notVeryEffective',
+			title: 'Not Very Effective (0.7x)',
+			type: 'type',
+			icon: faAngleDown
+		},
+		{
+			column: 'littleEffect',
+			title: 'Little Effect (0.5x)',
+			type: 'type',
+			icon: faAngleDoubleDown
+		}
+	];
 </script>
 
 <h1>
-	{$page.params.type}
-	<Type types={[$page.params.type]} />
+	{type}
+	<Type types={type} />
 </h1>
+
+<h2>Damage Chart</h2>
+{#key type}
+	<Table data={typeList.filter((item) => item.type === type)} {headers} />
+{/key}
 
 <h2>Pokémon with this type <span>({pokemonList.length})</span></h2>
 <TablePokemon {pokemonList} />
