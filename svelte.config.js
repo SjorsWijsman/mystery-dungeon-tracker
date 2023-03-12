@@ -5,7 +5,9 @@ export default {
 		adapter: adapter({
 			pages: 'docs',
 			assets: 'docs',
-			fallback: null
+			fallback: null,
+			precompress: false,
+			domain: ''
 		}),
 		paths: {
 			base: process.env.NODE_ENV === 'production' ? '/mystery-dungeon-tracker' : ''
