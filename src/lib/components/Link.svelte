@@ -2,18 +2,30 @@
 	import { base } from '$app/paths';
 	import Fa from 'svelte-fa';
 
+	export let href = null;
 	export let path = '';
 	export let icon = null;
 </script>
 
-<a href="{base}/{path}">
-	{#if icon}
-		<Fa {icon} />
-	{/if}
-	<span>
-		<slot />
-	</span>
-</a>
+{#if href}
+	<a {href}>
+		{#if icon}
+			<Fa {icon} />
+		{/if}
+		<span>
+			<slot />
+		</span>
+	</a>
+{:else}
+	<a href="{base}/{path}">
+		{#if icon}
+			<Fa {icon} />
+		{/if}
+		<span>
+			<slot />
+		</span>
+	</a>
+{/if}
 
 <style>
 	a {
