@@ -1,0 +1,1 @@
+import{p as e}from"./pokemon.df502977.js";function o(){return{pokemonList:e}}const r=Object.freeze(Object.defineProperty({__proto__:null,load:o},Symbol.toStringTag,{value:"Module"}));export{r as _,o as l};

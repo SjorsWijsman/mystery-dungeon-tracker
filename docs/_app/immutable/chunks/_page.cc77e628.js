@@ -1,0 +1,1 @@
+import{p as t}from"./pokemon.df502977.js";function n({params:o}){return t.filter(e=>e.id===o.id)[0]}const i=Object.freeze(Object.defineProperty({__proto__:null,load:n},Symbol.toStringTag,{value:"Module"}));export{i as _,n as l};

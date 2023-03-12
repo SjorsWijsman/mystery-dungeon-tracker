@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="../favicon.png" />
+		<link rel="stylesheet" href="../global.css" />
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..800&family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>Pokémon Mystery Dungeon</title>
+
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout.8c53a331.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/index.bf90f4b9.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.82d3e316.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Table.7fbe9c49.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Type.ca53918b.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.30cc9528.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.9da4bb58.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.26bfd125.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.72d649b0.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.b5551af1.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.e26dee35.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/pokemon.df502977.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/types.f3ff5af0.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.4e4d0d34.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.d397ee2b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/store.a32f6c00.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.js.984db11e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.da46b06b.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/types-_type_types_-page.svelte.b5dcd084.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/TablePokemon.d470a9c1.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Table.2072009c.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Type.8d97e263.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.e6249c3e.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/types-_type_types_-page.js.26461bb9.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page.ec34a379.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+
+
+<header class="svelte-uv1d8a scrolled"><nav><ul class="svelte-uv1d8a"><li><a href="/mystery-dungeon-tracker/" class="svelte-1cfoshx"><svg class="svelte-fa  svelte-1cj2gr0" style="height:1em;vertical-align:-.125em;transform-origin:center;overflow:visible" viewBox="0 0 576 512" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg"><g transform="translate(288 256)" transform-origin="144 0"><g transform="translate(0,0) scale(1,1)"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" fill="currentColor" transform="translate(-288 -256)"></path></g></g></svg>
+	<span class="svelte-1cfoshx"></span>
+</a></li>
+			<li><a href="/mystery-dungeon-tracker/pokedex" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Pokédex</span>
+</a></li>
+			<li><a href="/mystery-dungeon-tracker/types" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Types</span>
+</a></li></ul></nav></header>
+<div class="svelte-sdf2l4" style="background: linear-gradient(to right, 
+    undefined 20%,
+    rgb(0, 0, 0),
+    undefined 80%
+	);"></div>
+<main class="svelte-uv1d8a"><nav class="svelte-uv1d8a"><a href="/mystery-dungeon-tracker/" class="svelte-1cfoshx"><svg class="svelte-fa  svelte-1cj2gr0" style="height:1em;vertical-align:-.125em;transform-origin:center;overflow:visible" viewBox="0 0 448 512" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg"><g transform="translate(224 256)" transform-origin="112 0"><g transform="translate(0,0) scale(1,1)"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" fill="currentColor" transform="translate(-224 -256)"></path></g></g></svg>
+	<span class="svelte-1cfoshx">Go Back</span>
+</a></nav>
+	<h1 class="svelte-1q1f2lm">bug
+	<div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div></h1>
+
+<h2>Pokémon with this type <span>(49)</span></h2>
+<table class="svelte-1fv9ls8"><tr class="svelte-1fv9ls8"><th class="icons svelte-1fv9ls8"></th>
+		<th class="svelte-1fv9ls8 hasIcon sortable"><div class="svelte-1fv9ls8"><svg class="svelte-fa  svelte-1cj2gr0" style="height:1em;vertical-align:-.125em;transform-origin:center;overflow:visible" viewBox="0 0 448 512" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg"><g transform="translate(224 256)" transform-origin="112 0"><g transform="translate(0,0) scale(1,1)"><path d="M181.3 32.4c17.4 2.9 29.2 19.4 26.3 36.8L197.8 128h95.1l11.5-69.3c2.9-17.4 19.4-29.2 36.8-26.3s29.2 19.4 26.3 36.8L357.8 128H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H347.1L325.8 320H384c17.7 0 32 14.3 32 32s-14.3 32-32 32H315.1l-11.5 69.3c-2.9 17.4-19.4 29.2-36.8 26.3s-29.2-19.4-26.3-36.8l9.8-58.7H155.1l-11.5 69.3c-2.9 17.4-19.4 29.2-36.8 26.3s-29.2-19.4-26.3-36.8L90.2 384H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h68.9l21.3-128H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h68.9l11.5-69.3c2.9-17.4 19.4-29.2 36.8-26.3zM187.1 192L165.8 320h95.1l21.3-128H187.1z" fill="currentColor" transform="translate(-224 -256)"></path></g></g></svg>
+					<span class="svelte-1fv9ls8">ID</span>
+					<button class="svelte-1uezzs1"><svg class="svelte-fa  svelte-1cj2gr0" style="height:1em;vertical-align:-.125em;transform-origin:center;overflow:visible" viewBox="0 0 320 512" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg"><g transform="translate(160 256)" transform-origin="80 0"><g transform="translate(0,0) scale(1,1)"><path d="M182.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z" fill="currentColor" transform="translate(-160 -256)"></path></g></g></svg></button></div>
+			</th><th class="svelte-1fv9ls8 hasIcon sortable"><div class="svelte-1fv9ls8"><svg class="svelte-fa  svelte-1cj2gr0" style="height:1em;vertical-align:-.125em;transform-origin:center;overflow:visible" viewBox="0 0 384 512" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg"><g transform="translate(192 256)" transform-origin="96 0"><g transform="translate(0,0) scale(1,1)"><path d="M40.1 467.1l-11.2 9c-3.2 2.5-7.1 3.9-11.1 3.9C8 480 0 472 0 462.2V192C0 86 86 0 192 0S384 86 384 192V462.2c0 9.8-8 17.8-17.8 17.8c-4 0-7.9-1.4-11.1-3.9l-11.2-9c-13.4-10.7-32.8-9-44.1 3.9L269.3 506c-3.3 3.8-8.2 6-13.3 6s-9.9-2.2-13.3-6l-26.6-30.5c-12.7-14.6-35.4-14.6-48.2 0L141.3 506c-3.3 3.8-8.2 6-13.3 6s-9.9-2.2-13.3-6L84.2 471c-11.3-12.9-30.7-14.6-44.1-3.9zM160 192a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z" fill="currentColor" transform="translate(-192 -256)"></path></g></g></svg>
+					<span class="svelte-1fv9ls8">Pokémon</span>
+					<button class="svelte-1uezzs1 inactive"><svg class="svelte-fa  svelte-1cj2gr0" style="height:1em;vertical-align:-.125em;transform-origin:center;overflow:visible" viewBox="0 0 320 512" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg"><g transform="translate(160 256)" transform-origin="80 0"><g transform="translate(0,0) scale(1,1)"><path d="M137.4 41.4c12.5-12.5 32.8-12.5 45.3 0l128 128c9.2 9.2 11.9 22.9 6.9 34.9s-16.6 19.8-29.6 19.8H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9l128-128zm0 429.3l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128c-12.5 12.5-32.8 12.5-45.3 0z" fill="currentColor" transform="translate(-160 -256)"></path></g></g></svg></button></div>
+			</th><th class="svelte-1fv9ls8 hasIcon"><div class="svelte-1fv9ls8"><svg class="svelte-fa  svelte-1cj2gr0" style="height:1em;vertical-align:-.125em;transform-origin:center;overflow:visible" viewBox="0 0 384 512" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg"><g transform="translate(192 256)" transform-origin="96 0"><g transform="translate(0,0) scale(1,1)"><path d="M317.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224C.9 240.7-2.6 254.8 2 267.3S18.7 288 32 288H143.5L66.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7H240.5L317.4 44.6z" fill="currentColor" transform="translate(-192 -256)"></path></g></g></svg>
+					<span class="svelte-1fv9ls8">Type</span>
+					</div>
+			</th></tr>
+
+	<tr id="010" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/010.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">010
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/010" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Caterpie
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="011" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/011.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">011
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/011" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Metapod
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="012" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/012.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">012
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/012" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Butterfree
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/flying" class="svelte-a9mlzu" style="--color: var(--color-flying);">flying
+			</a>
+</div>
+				</td>
+		</tr><tr id="013" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/013.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">013
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/013" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Weedle
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/poison" class="svelte-a9mlzu" style="--color: var(--color-poison);">poison
+			</a>
+</div>
+				</td>
+		</tr><tr id="014" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/014.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">014
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/014" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Kakuna
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/poison" class="svelte-a9mlzu" style="--color: var(--color-poison);">poison
+			</a>
+</div>
+				</td>
+		</tr><tr id="015" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/015.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">015
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/015" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Beedrill
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/poison" class="svelte-a9mlzu" style="--color: var(--color-poison);">poison
+			</a>
+</div>
+				</td>
+		</tr><tr id="046" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/046.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">046
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/046" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Paras
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/grass" class="svelte-a9mlzu" style="--color: var(--color-grass);">grass
+			</a>
+</div>
+				</td>
+		</tr><tr id="047" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/047.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">047
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/047" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Parasect
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/grass" class="svelte-a9mlzu" style="--color: var(--color-grass);">grass
+			</a>
+</div>
+				</td>
+		</tr><tr id="048" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/048.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">048
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/048" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Venonat
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/poison" class="svelte-a9mlzu" style="--color: var(--color-poison);">poison
+			</a>
+</div>
+				</td>
+		</tr><tr id="049" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/049.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">049
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/049" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Venomoth
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/poison" class="svelte-a9mlzu" style="--color: var(--color-poison);">poison
+			</a>
+</div>
+				</td>
+		</tr><tr id="123" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/123.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">123
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/123" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Scyther
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/flying" class="svelte-a9mlzu" style="--color: var(--color-flying);">flying
+			</a>
+</div>
+				</td>
+		</tr><tr id="127" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/127.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">127
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/127" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Pinsir
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="165" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/165.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">165
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/165" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Ledyba
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/flying" class="svelte-a9mlzu" style="--color: var(--color-flying);">flying
+			</a>
+</div>
+				</td>
+		</tr><tr id="166" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/166.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">166
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/166" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Ledian
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/flying" class="svelte-a9mlzu" style="--color: var(--color-flying);">flying
+			</a>
+</div>
+				</td>
+		</tr><tr id="167" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/167.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">167
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/167" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Spinarak
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/poison" class="svelte-a9mlzu" style="--color: var(--color-poison);">poison
+			</a>
+</div>
+				</td>
+		</tr><tr id="168" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/168.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">168
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/168" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Ariados
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/poison" class="svelte-a9mlzu" style="--color: var(--color-poison);">poison
+			</a>
+</div>
+				</td>
+		</tr><tr id="193" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/193.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">193
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/193" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Yanma
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/flying" class="svelte-a9mlzu" style="--color: var(--color-flying);">flying
+			</a>
+</div>
+				</td>
+		</tr><tr id="204" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/204.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">204
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/204" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Pineco
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="205" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/205.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">205
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/205" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Forretress
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/steel" class="svelte-a9mlzu" style="--color: var(--color-steel);">steel
+			</a>
+</div>
+				</td>
+		</tr><tr id="212" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/212.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">212
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/212" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Scizor
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/steel" class="svelte-a9mlzu" style="--color: var(--color-steel);">steel
+			</a>
+</div>
+				</td>
+		</tr><tr id="213" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/213.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">213
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/213" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Shuckle
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/rock" class="svelte-a9mlzu" style="--color: var(--color-rock);">rock
+			</a>
+</div>
+				</td>
+		</tr><tr id="214" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/214.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">214
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/214" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Heracross
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/fighting" class="svelte-a9mlzu" style="--color: var(--color-fighting);">fighting
+			</a>
+</div>
+				</td>
+		</tr><tr id="265" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/265.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">265
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/265" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Wurmple
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="266" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/266.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">266
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/266" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Silcoon
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="267" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/267.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">267
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/267" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Beautifly
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/flying" class="svelte-a9mlzu" style="--color: var(--color-flying);">flying
+			</a>
+</div>
+				</td>
+		</tr><tr id="268" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/268.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">268
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/268" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Cascoon
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="269" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/269.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">269
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/269" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Dustox
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/poison" class="svelte-a9mlzu" style="--color: var(--color-poison);">poison
+			</a>
+</div>
+				</td>
+		</tr><tr id="283" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/283.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">283
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/283" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Surskit
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/water" class="svelte-a9mlzu" style="--color: var(--color-water);">water
+			</a>
+</div>
+				</td>
+		</tr><tr id="284" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/284.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">284
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/284" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Masquerain
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/flying" class="svelte-a9mlzu" style="--color: var(--color-flying);">flying
+			</a>
+</div>
+				</td>
+		</tr><tr id="290" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/290.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">290
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/290" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Nincada
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/ground" class="svelte-a9mlzu" style="--color: var(--color-ground);">ground
+			</a>
+</div>
+				</td>
+		</tr><tr id="291" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/291.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">291
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/291" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Ninjask
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/flying" class="svelte-a9mlzu" style="--color: var(--color-flying);">flying
+			</a>
+</div>
+				</td>
+		</tr><tr id="292" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/292.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">292
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/292" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Shedinja
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/ghost" class="svelte-a9mlzu" style="--color: var(--color-ghost);">ghost
+			</a>
+</div>
+				</td>
+		</tr><tr id="313" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/313.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">313
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/313" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Volbeat
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="314" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/314.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">314
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/314" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Illumise
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="347" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/347.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">347
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/347" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Anorith
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/rock" class="svelte-a9mlzu" style="--color: var(--color-rock);">rock
+			</a><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="348" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/348.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">348
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/348" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Armaldo
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/rock" class="svelte-a9mlzu" style="--color: var(--color-rock);">rock
+			</a><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="401" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/401.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">401
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/401" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Kricketot
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="402" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/402.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">402
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/402" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Kricketune
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="412" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/412.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">412
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/412" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Burmy (Plant Cloak)
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="412S" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/412S.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">412S
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/412S" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Burmy (Sandy Cloak)
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="412T" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/412T.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">412T
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/412T" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Burmy (Trash Cloak)
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="413" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/413.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">413
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/413" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Wormadam (Plant Cloak)
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/grass" class="svelte-a9mlzu" style="--color: var(--color-grass);">grass
+			</a>
+</div>
+				</td>
+		</tr><tr id="413S" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/413S.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">413S
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/413S" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Wormadam (Sandy Cloak)
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/ground" class="svelte-a9mlzu" style="--color: var(--color-ground);">ground
+			</a>
+</div>
+				</td>
+		</tr><tr id="413T" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/413T.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">413T
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/413T" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Wormadam (Trash Cloak)
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/steel" class="svelte-a9mlzu" style="--color: var(--color-steel);">steel
+			</a>
+</div>
+				</td>
+		</tr><tr id="414" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/414.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">414
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/414" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Mothim
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/flying" class="svelte-a9mlzu" style="--color: var(--color-flying);">flying
+			</a>
+</div>
+				</td>
+		</tr><tr id="415" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/415.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">415
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/415" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Combee
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/flying" class="svelte-a9mlzu" style="--color: var(--color-flying);">flying
+			</a>
+</div>
+				</td>
+		</tr><tr id="416" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/416.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">416
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/416" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Vespiquen
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/flying" class="svelte-a9mlzu" style="--color: var(--color-flying);">flying
+			</a>
+</div>
+				</td>
+		</tr><tr id="451" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/451.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">451
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/451" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Skorupi
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/poison" class="svelte-a9mlzu" style="--color: var(--color-poison);">poison
+			</a><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a>
+</div>
+				</td>
+		</tr><tr id="469" class="svelte-1fv9ls8"><td class="icons svelte-1fv9ls8"><img src="https://www.serebii.net/dungeonsky/headshot/469.png" alt="" class="svelte-1fv9ls8">
+				</td>
+			<td class="svelte-1fv9ls8">469
+				</td><td class="svelte-1fv9ls8"><a href="/mystery-dungeon-tracker/pokedex/469" class="svelte-1cfoshx">
+	<span class="svelte-1cfoshx">Yanmega
+						</span>
+</a>
+				</td><td class="svelte-1fv9ls8"><div class="svelte-a9mlzu"><a href="/mystery-dungeon-tracker/types/bug" class="svelte-a9mlzu" style="--color: var(--color-bug);">bug
+			</a><a href="/mystery-dungeon-tracker/types/flying" class="svelte-a9mlzu" style="--color: var(--color-flying);">flying
+			</a>
+</div>
+				</td>
+		</tr>
+</table>
+</main>
+
+
+			
+			<script>
+				{
+					__sveltekit_1rclf0x = {
+						env: {},
+						assets: "/mystery-dungeon-tracker",
+						base: new URL("..", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.30cc9528.js"),
+						import("../_app/immutable/entry/app.e26dee35.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_1rclf0x.element, {
+							node_ids: [0, 6],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

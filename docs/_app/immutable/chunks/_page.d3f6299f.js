@@ -1,0 +1,1 @@
+import{t as e}from"./types.f3ff5af0.js";function t(){return{typeList:e}}const r=Object.freeze(Object.defineProperty({__proto__:null,load:t},Symbol.toStringTag,{value:"Module"}));export{r as _,t as l};
