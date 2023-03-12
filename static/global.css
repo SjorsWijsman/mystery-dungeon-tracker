@@ -1,6 +1,7 @@
 html {
 	font-size: max(12px, calc(60% + 0.3vmin));
 	--color-main: #00adcc;
+	--color-gold: #e7d104;
 	--color-white: #fff;
 	--color-black-dark: #131316;
 	--color-black: #1c1c21;

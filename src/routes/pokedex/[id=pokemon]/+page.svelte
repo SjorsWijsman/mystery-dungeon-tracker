@@ -2,6 +2,7 @@
 	import Type from '$lib/components/Type.svelte';
 	import Recruited from '$lib/components/Recruited.svelte';
 	import { pageColor } from '$lib/store';
+	import Portrait from '../../../lib/components/Portrait.svelte';
 
 	export let data;
 
@@ -12,7 +13,7 @@
 	<Recruited id={data.id} />
 </div>
 <section>
-	<img src="https://www.serebii.net/dungeonsky/headshot/{data.id}.png" alt="" />
+	<Portrait id={data.id} size={4} />
 	<h1>{data.name} <span>#{data.id}</span></h1>
 </section>
 <section>
@@ -38,13 +39,6 @@
 	section:not(:first-of-type) {
 		align-items: flex-start;
 		flex-direction: column;
-	}
-
-	img {
-		width: 4rem;
-		height: 4rem;
-		border-radius: 0.3rem;
-		background-color: var(--color-black-light);
 	}
 
 	h1 {

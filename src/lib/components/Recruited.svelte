@@ -1,12 +1,20 @@
 <script>
 	import { recruitedPokemon } from '$lib/store';
+	import { createEventDispatcher } from 'svelte';
 
 	export let id;
 	export let hideLabel = false;
 
+	const dispatch = createEventDispatcher();
+
 	function addRemovePokemon() {
-		if (!$recruitedPokemon.includes(id)) $recruitedPokemon = [...$recruitedPokemon, id];
-		else $recruitedPokemon = $recruitedPokemon.filter((item) => item !== id);
+		if (!$recruitedPokemon.includes(id)) {
+			$recruitedPokemon = [...$recruitedPokemon, id];
+			dispatch('recruited', { id });
+		} else {
+			$recruitedPokemon = $recruitedPokemon.filter((item) => item !== id);
+			dispatch('dismissed', { id });
+		}
 	}
 </script>
 

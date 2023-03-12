@@ -2,8 +2,9 @@
 	import Sort from '$lib/components/Sort.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import Type from '$lib/components/Type.svelte';
-	import Fa from 'svelte-fa';
 	import Recruited from '$lib/components/Recruited.svelte';
+	import Portrait from '$lib/components/Portrait.svelte';
+	import Fa from 'svelte-fa';
 
 	export let headers;
 	export let data;
@@ -54,7 +55,7 @@
 		<tr id={item.id}>
 			{#if showIcons}
 				<td class="icons">
-					<img src={item.icon} alt="" />
+					<Portrait id={item.id} />
 				</td>
 			{/if}
 			{#each headers as header}
@@ -126,14 +127,5 @@
 
 	tr {
 		height: 2.6rem;
-	}
-
-	tr img {
-		display: block;
-		border-radius: 0.3rem;
-		width: 2rem;
-		height: 2rem;
-		background-color: var(--color-black-light);
-		transform: scaleX(-1);
 	}
 </style>
