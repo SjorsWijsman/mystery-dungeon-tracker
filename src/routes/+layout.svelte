@@ -2,13 +2,9 @@
 	import Link from '$lib/components/Link.svelte';
 	import { faArrowLeft, faHome } from '@fortawesome/free-solid-svg-icons';
 	import PageColor from '$lib/components/PageColor.svelte';
-
-	let scrollY;
 </script>
 
-<svelte:window bind:scrollY />
-
-<header class:scrolled={scrollY !== 0}>
+<header>
 	<nav>
 		<ul>
 			<li>
@@ -33,19 +29,19 @@
 
 <style>
 	header {
-		padding: 2rem;
+		display: flex;
+		align-items: center;
+		height: 5rem;
+		width: 100%;
+		padding-left: 2rem;
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 100%;
 		z-index: 10;
 		transition: all 0.5s ease-out;
 		background-color: var(--color-black-transparent);
 		backdrop-filter: blur(1rem);
-	}
-
-	header.scrolled {
-		box-shadow: 0 -0.2rem 1rem var(--color-black-dark);
+		border-bottom: 1px solid var(--color-black-light);
 	}
 
 	ul {

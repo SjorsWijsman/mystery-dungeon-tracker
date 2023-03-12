@@ -95,6 +95,7 @@
 
 <style>
 	table {
+		position: relative;
 		border-spacing: 0;
 		border-collapse: collapse;
 	}
@@ -114,6 +115,21 @@
 	th {
 		font-weight: 400;
 		text-align: left;
+		position: sticky;
+		top: calc(5rem - 1px);
+		background-color: var(--color-black);
+		z-index: 1;
+	}
+
+	/* line under th */
+	th::after {
+		content: '';
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: var(--color-black-light);
 	}
 
 	th > div {
@@ -133,7 +149,6 @@
 	th:not(.icons) {
 		padding: 0.3rem 0.6rem;
 		padding-right: 0.3rem;
-		opacity: 0.95;
 	}
 
 	td:not(.icons) {

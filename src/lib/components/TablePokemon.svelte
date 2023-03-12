@@ -1,6 +1,6 @@
 <script>
 	import Table from '$lib/components/Table.svelte';
-	import { faHashtag, faGhost, faBolt, faHeart } from '@fortawesome/free-solid-svg-icons';
+	import { faHashtag, faBolt, faHeart, faStar } from '@fortawesome/free-solid-svg-icons';
 
 	export let pokemonList;
 
@@ -20,7 +20,7 @@
 		{
 			column: 'name',
 			title: 'Pokémon',
-			icon: faGhost,
+			icon: faStar,
 			sortable: true,
 			link: true
 		},
