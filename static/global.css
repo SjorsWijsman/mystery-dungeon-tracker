@@ -1,6 +1,8 @@
 html {
 	font-size: max(12px, calc(60% + 0.3vmin));
+	--color-main-dark: #09869c;
 	--color-main: #00adcc;
+	--color-main-light: #1ecfee;
 	--color-gold: #e7d104;
 	--color-white: #fff;
 	--color-black-dark: #131316;
@@ -119,7 +121,7 @@ h3 {
 	height: 1.25rem;
 	width: 1.25rem;
 	background: var(--color-black-light);
-	transition: background 250ms;
+	transition: all 0.2s ease-out;
 	border: 1px solid var(--color-black-lighter);
 	border-radius: 0.2rem;
 }
@@ -138,7 +140,7 @@ h3 {
 	height: 0.6rem;
 	border: solid #ffffff;
 	border-width: 0 2px 2px 0;
-	transition: background 250ms;
+	transition: all 0.2s ease-out;
 	transform: rotate(45deg);
 }
 
@@ -171,13 +173,13 @@ h3 {
 }
 
 .b-contain input:focus ~ .b-input {
-	box-shadow: 0 0 0 2px #60a5fa;
+	box-shadow: 0 0 0 2px var(--color-main-light);
 }
 
 .b-contain input[type='checkbox']:checked ~ .b-input,
 .b-contain input[type='radio']:checked ~ .b-input {
-	background: #3b82f6;
-	border-color: #1d4ed8;
+	background: var(--color-main);
+	border-color: var(--color-main-dark);
 }
 
 .b-contain input[type='checkbox']:disabled ~ .b-input,
@@ -194,6 +196,6 @@ h3 {
 .b-contain input[type='checkbox']:checked:focus ~ .b-input,
 .b-contain:hover input[type='radio']:not([disabled]):checked ~ .b-input,
 .b-contain input[type='radio']:checked:focus ~ .b-input {
-	background: #2563eb;
-	border-color: #1e40af;
+	background: var(--color-main);
+	border-color: var(--color-main-dark);
 }

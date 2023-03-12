@@ -1,4 +1,5 @@
 <script>
+	import { recruitedPokemon } from '$lib/store';
 	import Sort from '$lib/components/Sort.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import Type from '$lib/components/Type.svelte';
@@ -17,7 +18,16 @@
 	let sortedData = data;
 
 	function sortData() {
-		sortedData = [...data].sort(compare);
+		if (sort.column === 'recruited') {
+			sortedData = [...data]
+				.map((item) => {
+					item.recruited = $recruitedPokemon.includes(item.id);
+					return item;
+				})
+				.sort(compare);
+		} else {
+			sortedData = [...data].sort(compare);
+		}
 	}
 
 	sortData();

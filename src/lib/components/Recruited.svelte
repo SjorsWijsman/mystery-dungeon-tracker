@@ -20,7 +20,7 @@
 
 <label class="b-contain">
 	{#if !hideLabel}
-		<span>Caught</span>
+		<span>Recruited</span>
 	{/if}
 	<input
 		type="checkbox"

@@ -32,6 +32,7 @@
 		{
 			column: 'recruited',
 			title: 'Recruited',
+			sortable: true,
 			icon: faHeart
 		}
 	];
