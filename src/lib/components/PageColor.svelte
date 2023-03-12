@@ -4,12 +4,12 @@
 	import { tweened } from 'svelte/motion';
 	import { browser } from '$app/environment';
 
-	let color1 = tweened('--color-black-light', {
+	let color1 = tweened(toHexColor('--color-black-light'), {
 		duration: 500,
 		interpolate: interpolateLab
 	});
 
-	let color2 = tweened('--color-black-light', {
+	let color2 = tweened(toHexColor('--color-black-light'), {
 		duration: 500,
 		interpolate: interpolateLab
 	});
@@ -36,14 +36,13 @@
     ${interpolateLab($color1, $color2)(0.5)},
     ${$color2} 80%
 	)`}
-	class:noColor={!$pageColor.length}
 />
 
 <style>
 	div {
 		height: 20rem;
 		transition: all 0.2s ease-out;
-		background-color: var(--color-black-dark);
+		background-color: var(--color-black-light);
 		display: flex;
 		justify-content: space-between;
 	}
