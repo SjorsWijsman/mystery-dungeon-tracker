@@ -8,13 +8,8 @@ export default {
 			fallback: null,
 			precompress: false
 		}),
-		prerender: {
-			default: true
-		},
-		trailingSlash: 'always',
 		paths: {
-			base: '/mystery-dungeon-tracker',
-			assets: '/mystery-dungeon-tracker'
+			base: '/mystery-dungeon-tracker'
 		}
 	}
 };
