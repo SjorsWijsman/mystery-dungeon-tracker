@@ -2,7 +2,7 @@
 	import { recruitedPokemon } from '$lib/store';
 
 	export let id;
-	export let showLabel = false;
+	export let hideLabel = false;
 
 	function addRemovePokemon() {
 		if (!$recruitedPokemon.includes(id)) $recruitedPokemon = [...$recruitedPokemon, id];
@@ -11,7 +11,7 @@
 </script>
 
 <label class="b-contain">
-	{#if showLabel}
+	{#if !hideLabel}
 		<span>Caught</span>
 	{/if}
 	<input

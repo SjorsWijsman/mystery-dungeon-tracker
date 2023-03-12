@@ -66,7 +66,7 @@
 					{:else if header.column === 'type'}
 						<Type types={item.type} />
 					{:else if header.column === 'recruited'}
-						<Recruited id={item.id} />
+						<Recruited id={item.id} hideLabel={true} />
 					{:else}
 						{item[header.column]}
 					{/if}

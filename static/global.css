@@ -6,6 +6,7 @@ html {
 	--color-black: #1c1c21;
 	--color-black-transparent: #1c1c21e7;
 	--color-black-light: #26262b;
+	--color-black-lighter: #43434b;
 	--color-normal: #a8a77a;
 	--color-fire: #ee8130;
 	--color-water: #6390f0;
@@ -25,6 +26,7 @@ html {
 	--color-steel: #b7b7ce;
 	--font-main: 'Alexandria', sans-serif;
 	--font-mono: 'Space Mono', monospace;
+	--width-max: 60rem;
 }
 
 :root {
@@ -52,7 +54,8 @@ main {
 	padding-top: 3rem;
 	padding-bottom: 32rem;
 	background-color: var(--color);
-	max-width: 60rem;
+	max-width: var(--width-max);
+	position: relative;
 }
 
 /* Headers */
@@ -114,9 +117,9 @@ h3 {
 	left: 0;
 	height: 1.25rem;
 	width: 1.25rem;
-	background: #f1f5f9;
+	background: var(--color-black-light);
 	transition: background 250ms;
-	border: 1px solid #94a3b8;
+	border: 1px solid var(--color-black-lighter);
 	border-radius: 0.2rem;
 }
 
@@ -163,8 +166,7 @@ h3 {
 .b-contain input[type='checkbox']:focus ~ .b-input,
 .b-contain:hover input[type='radio']:not([disabled]) ~ .b-input,
 .b-contain input[type='radio']:focus ~ .b-input {
-	background: #e2e8f0;
-	border-color: #64748b;
+	background: var(--color-black-lighter);
 }
 
 .b-contain input:focus ~ .b-input {
