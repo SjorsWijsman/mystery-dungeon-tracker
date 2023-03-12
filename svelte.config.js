@@ -5,12 +5,10 @@ export default {
 		adapter: adapter({
 			pages: 'docs',
 			assets: 'docs',
-			fallback: null,
-			precompress: false,
-			domain: ''
+			fallback: null
 		}),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/mystery-dungeon-tracker' : ''
+			base: '/mystery-dungeon-tracker'
 		}
 	}
 };
