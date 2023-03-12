@@ -1,1 +1,0 @@
-import{p as t}from"./pokemon.df502977.js";function r({params:e}){return{pokemonList:t.filter(o=>o.type.includes(e.type))}}const p=Object.freeze(Object.defineProperty({__proto__:null,load:r},Symbol.toStringTag,{value:"Module"}));export{p as _,r as l};
