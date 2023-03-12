@@ -1,6 +1,6 @@
 <script>
 	import TablePokemon from '$lib/components/TablePokemon.svelte';
-	import { pageColor } from '$lib/store';
+	import { pageColor, recruitedPokemon } from '$lib/store';
 
 	export let data;
 
@@ -10,4 +10,9 @@
 </script>
 
 <h1>Pokédex</h1>
+<h2>
+	Pokémon recruited: {$recruitedPokemon.length}/{pokemonList.length}
+	<span>({Math.round((100 / pokemonList.length) * $recruitedPokemon.length * 100) / 100}%)</span>
+</h2>
+
 <TablePokemon {pokemonList} />

@@ -18,6 +18,7 @@
 	let sortedData = data;
 
 	function sortData() {
+		// Different logic for recruited sort
 		if (sort.column === 'recruited') {
 			sortedData = [...data]
 				.map((item) => {
@@ -41,6 +42,11 @@
 		}
 		return 0;
 	}
+
+	// Resort data on recruitedpokemon change
+	recruitedPokemon.subscribe(() => {
+		if (sort.column === 'recruited') sortData();
+	});
 </script>
 
 <table>
