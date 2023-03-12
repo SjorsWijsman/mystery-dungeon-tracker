@@ -57,7 +57,7 @@
 
 	div.recruited {
 		transform: scale(1.1) rotate(3deg);
-		outline: 2px solid var(--color-gold);
+		box-shadow: 0 0 0 2px var(--color-gold);
 		background-color: var(--color-gold);
 	}
 

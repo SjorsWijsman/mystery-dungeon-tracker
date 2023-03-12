@@ -24,7 +24,7 @@
 					item.recruited = $recruitedPokemon.includes(item.id);
 					return item;
 				})
-				.sort(compare);
+				.sort((a, b) => compare(b, a));
 		} else {
 			sortedData = [...data].sort(compare);
 		}
@@ -102,6 +102,7 @@
 	th,
 	td {
 		padding: 0.3rem;
+		vertical-align: center;
 	}
 
 	th {

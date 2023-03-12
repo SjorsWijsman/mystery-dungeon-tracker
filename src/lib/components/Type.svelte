@@ -28,8 +28,8 @@
 	a {
 		--color: white;
 		text-transform: capitalize;
-		padding: 0.4em 0.6em;
-		padding-top: 0.25em;
+		padding: 4px 6px;
+		padding-top: 3px;
 		border-radius: 0.3rem;
 		border: 1px solid var(--color);
 		color: var(--color);

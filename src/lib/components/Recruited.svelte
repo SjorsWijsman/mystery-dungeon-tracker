@@ -19,9 +19,6 @@
 </script>
 
 <label class="b-contain">
-	{#if !hideLabel}
-		<span>Recruited</span>
-	{/if}
 	<input
 		type="checkbox"
 		on:change={addRemovePokemon}
@@ -30,4 +27,7 @@
 		checked={$recruitedPokemon.includes(id)}
 	/>
 	<div class="b-input" />
+	{#if !hideLabel}
+		<span>Recruited</span>
+	{/if}
 </label>
