@@ -200,3 +200,25 @@ h3 {
 	background: var(--color-main);
 	border-color: var(--color-main-dark);
 }
+
+/* Scrollbar */
+/* Firefox */
+* {
+	scrollbar-width: auto;
+	scrollbar-color: var(--color-black-lighter) var(--color-black);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 1.3rem;
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--color-black);
+	border: 1px solid var(--color-black-light);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--color-black-lighter);
+	border-radius: 0.3rem;
+}
