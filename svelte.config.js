@@ -13,7 +13,8 @@ export default {
 		},
 		trailingSlash: 'always',
 		paths: {
-			base: '/mystery-dungeon-tracker'
+			base: '/mystery-dungeon-tracker',
+			assets: '/mystery-dungeon-tracker'
 		}
 	}
 };
