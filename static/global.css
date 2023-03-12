@@ -47,6 +47,7 @@ html {
 
 body {
 	margin: 0;
+	overflow-y: scroll;
 }
 
 /* Sections */
@@ -87,7 +88,10 @@ h3 {
 	font-weight: 300;
 }
 
+/* -------------------- */
 /* Checkboxes & Radiobuttons: https://bun.js.org/ */
+/* -------------------- */
+
 .b-contain *,
 .b-contain *::before,
 .b-contain *::after {
@@ -201,7 +205,10 @@ h3 {
 	border-color: var(--color-main-dark);
 }
 
-/* Scrollbar */
+/* -------------------- */
+/* Scrollbars */
+/* -------------------- */
+
 /* Firefox */
 * {
 	scrollbar-width: auto;
@@ -210,7 +217,7 @@ h3 {
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-	width: 1.3rem;
+	width: 1rem;
 }
 
 *::-webkit-scrollbar-track {
@@ -221,4 +228,46 @@ h3 {
 *::-webkit-scrollbar-thumb {
 	background-color: var(--color-black-lighter);
 	border-radius: 0.3rem;
+}
+
+/* -------------------- */
+/* Tables */
+/* -------------------- */
+
+table {
+	position: relative;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+table,
+th,
+td {
+	border: 1px solid var(--color-black-light);
+}
+
+th,
+td {
+	padding: 0.3rem;
+	vertical-align: center;
+}
+
+th {
+	font-weight: 400;
+	text-align: left;
+	position: sticky;
+	top: calc(5rem - 1px);
+	background-color: var(--color-black);
+	z-index: 1;
+}
+
+/* line under th */
+th::after {
+	content: '';
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: var(--color-black-light);
 }

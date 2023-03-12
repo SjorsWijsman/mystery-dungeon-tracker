@@ -76,13 +76,13 @@
 			{/if}
 			{#each headers as header}
 				<td>
-					{#if header.link}
+					{#if header.type === 'link'}
 						<Link path="pokedex/{item.id}">
 							{item[header.column]}
 						</Link>
-					{:else if header.column === 'type'}
-						<Type types={item.type} />
-					{:else if header.column === 'recruited'}
+					{:else if header.type === 'type'}
+						<Type types={item[header.column]} />
+					{:else if header.type === 'recruited'}
 						<Recruited id={item.id} hideLabel={true} />
 					{:else}
 						{item[header.column]}
@@ -94,44 +94,6 @@
 </table>
 
 <style>
-	table {
-		position: relative;
-		border-spacing: 0;
-		border-collapse: collapse;
-	}
-
-	table,
-	th,
-	td {
-		border: 1px solid var(--color-black-light);
-	}
-
-	th,
-	td {
-		padding: 0.3rem;
-		vertical-align: center;
-	}
-
-	th {
-		font-weight: 400;
-		text-align: left;
-		position: sticky;
-		top: calc(5rem - 1px);
-		background-color: var(--color-black);
-		z-index: 1;
-	}
-
-	/* line under th */
-	th::after {
-		content: '';
-		position: absolute;
-		bottom: -1px;
-		left: 0;
-		width: 100%;
-		height: 1px;
-		background-color: var(--color-black-light);
-	}
-
 	th > div {
 		display: flex;
 		align-items: center;
@@ -155,9 +117,5 @@
 		padding: 0.3rem 0.6rem;
 		padding-right: 1rem;
 		opacity: 0.95;
-	}
-
-	tr {
-		height: 2.6rem;
 	}
 </style>

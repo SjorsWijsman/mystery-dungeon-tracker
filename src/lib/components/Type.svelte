@@ -1,6 +1,8 @@
 <script>
 	import { base } from '$app/paths';
+
 	export let types = [];
+	export let showPlaceholder = false;
 
 	types = [types].flat();
 </script>
@@ -12,7 +14,7 @@
 				{type}
 			</a>
 		{/each}
-	{:else}
+	{:else if showPlaceholder}
 		<span class="unknown">Unknown</span>
 	{/if}
 </div>

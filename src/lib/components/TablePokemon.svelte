@@ -22,18 +22,20 @@
 			title: 'Pokémon',
 			icon: faStar,
 			sortable: true,
-			link: true
+			type: 'link'
 		},
 		{
 			column: 'type',
 			title: 'Type',
-			icon: faBolt
+			icon: faBolt,
+			type: 'type'
 		},
 		{
 			column: 'recruited',
 			title: 'Recruited',
 			sortable: true,
-			icon: faHeart
+			icon: faHeart,
+			type: 'recruited'
 		}
 	];
 </script>
