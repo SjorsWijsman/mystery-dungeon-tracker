@@ -3,6 +3,7 @@
 	import Link from '$lib/components/Link.svelte';
 	import Type from '$lib/components/Type.svelte';
 	import Fa from 'svelte-fa';
+	import Recruited from '$lib/components/Recruited.svelte';
 
 	export let headers;
 	export let data;
@@ -64,6 +65,8 @@
 						</Link>
 					{:else if header.column === 'type'}
 						<Type types={item.type} />
+					{:else if header.column === 'recruited'}
+						<Recruited id={item.id} />
 					{:else}
 						{item[header.column]}
 					{/if}
@@ -106,7 +109,7 @@
 	}
 
 	th.hasIcon span {
-		margin-left: 0.3rem;
+		margin: 0.3rem;
 	}
 
 	th:not(.icons) {
@@ -128,9 +131,9 @@
 	tr img {
 		display: block;
 		border-radius: 0.3rem;
-		margin-right: 0.1rem;
 		width: 2rem;
 		height: 2rem;
 		background-color: var(--color-black-light);
+		transform: scaleX(-1);
 	}
 </style>

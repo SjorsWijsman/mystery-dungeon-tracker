@@ -1,7 +1,10 @@
 <script>
+	import { recruitedPokemon } from '$lib/store';
 	import Link from '$lib/components/Link.svelte';
 	import { faArrowLeft, faHome } from '@fortawesome/free-solid-svg-icons';
 	import PageColor from '$lib/components/PageColor.svelte';
+
+	$: console.log($recruitedPokemon);
 
 	let scrollY;
 </script>
