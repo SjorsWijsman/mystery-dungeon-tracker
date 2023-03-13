@@ -1,6 +1,12 @@
 <script>
 	import Link from '$lib/components/Link.svelte';
-	import { faArrowLeft, faHome } from '@fortawesome/free-solid-svg-icons';
+	import {
+		faArrowLeft,
+		faBolt,
+		faHome,
+		faLocationDot,
+		faStar
+	} from '@fortawesome/free-solid-svg-icons';
 	import PageColor from '$lib/components/PageColor.svelte';
 </script>
 
@@ -11,10 +17,13 @@
 				<Link path={''} icon={faHome} />
 			</li>
 			<li>
-				<Link path={`pokedex`}>Pokédex</Link>
+				<Link path={`pokedex`} icon={faStar}>Pokédex</Link>
 			</li>
 			<li>
-				<Link path={`types`}>Types</Link>
+				<Link path={`types`} icon={faBolt}>Types</Link>
+			</li>
+			<li>
+				<Link path={`dungeons`} icon={faLocationDot}>Dungeons</Link>
 			</li>
 		</ul>
 	</nav>

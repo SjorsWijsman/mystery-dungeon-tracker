@@ -50,47 +50,51 @@
 </script>
 
 <table>
-	<tr>
-		{#if showIcons}
-			<th class="icons" />
-		{/if}
-		{#each headers as header}
-			<th class:hasIcon={header.icon} class:sortable={header.sortable}>
-				<div>
-					<Fa icon={header.icon} />
-					<span>{header.title}</span>
-					{#if header.sortable}
-						<Sort column={header.column} bind:sort on:sorted={sortData} />
-					{/if}
-				</div>
-			</th>
-		{/each}
-	</tr>
-
-	{#each sortedData as item (item.id)}
-		<tr id={item.id}>
+	<thead>
+		<tr>
 			{#if showIcons}
-				<td class="icons">
-					<Portrait id={item.id} />
-				</td>
+				<th class="icons" />
 			{/if}
 			{#each headers as header}
-				<td>
-					{#if header.type === 'link'}
-						<Link path="pokedex/{item.id}">
-							{item[header.column]}
-						</Link>
-					{:else if header.type === 'type'}
-						<Type types={item[header.column]} />
-					{:else if header.type === 'recruited'}
-						<Recruited id={item.id} hideLabel={true} />
-					{:else}
-						{item[header.column]}
-					{/if}
-				</td>
+				<th class:hasIcon={header.icon} class:sortable={header.sortable}>
+					<div>
+						<Fa icon={header.icon} />
+						<span>{header.title}</span>
+						{#if header.sortable}
+							<Sort column={header.column} bind:sort on:sorted={sortData} />
+						{/if}
+					</div>
+				</th>
 			{/each}
 		</tr>
-	{/each}
+	</thead>
+
+	<tbody>
+		{#each sortedData as item (item.id)}
+			<tr id={item.id}>
+				{#if showIcons}
+					<td class="icons">
+						<Portrait id={item.id} />
+					</td>
+				{/if}
+				{#each headers as header}
+					<td>
+						{#if header.type === 'link'}
+							<Link path="pokedex/{item.id}">
+								{item[header.column]}
+							</Link>
+						{:else if header.type === 'type'}
+							<Type types={item[header.column]} />
+						{:else if header.type === 'recruited'}
+							<Recruited id={item.id} hideLabel={true} />
+						{:else}
+							{item[header.column]}
+						{/if}
+					</td>
+				{/each}
+			</tr>
+		{/each}
+	</tbody>
 </table>
 
 <style>
