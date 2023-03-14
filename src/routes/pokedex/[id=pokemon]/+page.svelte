@@ -22,7 +22,7 @@
 		},
 		{
 			column: 'floors',
-			title: 'Found On',
+			title: 'Floors',
 			icon: faStairs,
 			sortable: true
 		}
@@ -38,7 +38,7 @@
 </section>
 <section>
 	<Type types={data.type} />
-	<h2>Found in</h2>
+	<h2>Found In</h2>
 	{#key data.foundIn}
 		<Table {headers} data={data.foundIn} showIcons={true} type={'dungeons'} />
 	{/key}
