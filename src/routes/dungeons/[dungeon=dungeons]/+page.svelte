@@ -1,10 +1,51 @@
 <script>
+	import Fa from 'svelte-fa';
+	import { faBolt, faHashtag, faHeart, faStairs, faStar } from '@fortawesome/free-solid-svg-icons';
+	import Table from '$lib/components/Table.svelte';
 	import Portrait from '$lib/components/Portrait.svelte';
 	import Completed from '$lib/components/Completed.svelte';
-	import { faStairs } from '@fortawesome/free-solid-svg-icons';
-	import Fa from 'svelte-fa';
+	import { pageColor } from '$lib/store';
 
 	export let data;
+
+	$pageColor = [...data.type].map((type) => `--color-${type}`);
+
+	let pokemonList;
+	$: pokemonList = data.pokemon;
+
+	const headers = [
+		{
+			column: 'id',
+			title: 'ID',
+			icon: faHashtag,
+			sortable: true
+		},
+		{
+			column: 'name',
+			title: 'Pokémon',
+			icon: faStar,
+			sortable: true,
+			type: 'link'
+		},
+		{
+			column: 'type',
+			title: 'Type',
+			icon: faBolt,
+			type: 'type'
+		},
+		{
+			column: 'floors',
+			title: 'Floors',
+			icon: faStairs
+		},
+		{
+			column: 'completed',
+			title: 'Recruited',
+			sortable: true,
+			icon: faHeart,
+			type: 'completed'
+		}
+	];
 
 	console.log(data);
 </script>
@@ -31,6 +72,9 @@
 		</tbody>
 	</table>
 	<h2>Pokemon</h2>
+	{#key pokemonList}
+		<Table {headers} data={pokemonList} showIcons={true} />
+	{/key}
 </section>
 
 <style>

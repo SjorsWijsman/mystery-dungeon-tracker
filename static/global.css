@@ -244,6 +244,11 @@ td {
 	padding: 0.3rem;
 	vertical-align: center;
 	border: 1px solid var(--color-black-light);
+	text-align: left;
+}
+
+th {
+	font-weight: 400;
 }
 
 thead {
@@ -253,5 +258,4 @@ thead {
 	box-shadow: inset 1px -1px var(--color-black-light);
 	z-index: 1;
 	font-weight: 400;
-	text-align: left;
 }

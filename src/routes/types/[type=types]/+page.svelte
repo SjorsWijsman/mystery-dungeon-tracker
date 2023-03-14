@@ -12,11 +12,9 @@
 	$: $pageColor = [`--color-${$page.params.type}`];
 
 	let type;
-
 	$: type = $page.params.type;
 
 	let pokemonList;
-
 	$: pokemonList = data.pokemonList;
 
 	const headers = [

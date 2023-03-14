@@ -5,6 +5,7 @@ export const dungeonList = [
 		floors: 'B4F + Bottom',
 		unlock: 'First dungeon in game',
 		boss: 'Zubat, Koffing (only on first visit)',
+		type: [],
 		pokemon: [
 			{
 				id: '090',
@@ -30,6 +31,7 @@ export const dungeonList = [
 		floors: 'B7F',
 		unlock: "After joining Wigglytuff's Guild",
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '345',
@@ -55,6 +57,7 @@ export const dungeonList = [
 		floors: '9F + Summit',
 		unlock: 'Activate Drowzee event at Kecleon Shop in Treasure Town',
 		boss: 'Drowzee (Only on first Visit)',
+		type: [],
 		pokemon: [
 			{
 				id: '066',
@@ -92,6 +95,7 @@ export const dungeonList = [
 		floors: 'B9F',
 		unlock: "Complete several optional missions after the watchman's work",
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '054',
@@ -137,6 +141,7 @@ export const dungeonList = [
 		floors: '12F + Interior',
 		unlock: 'Complete several optional missions after Team Poison Rose joins Guild',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '010',
@@ -198,6 +203,7 @@ export const dungeonList = [
 		floors: 'B9F + Small PathB5F',
 		unlock: 'Complete several optional missions after the Apple Woods mission',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '000',
@@ -243,6 +249,7 @@ export const dungeonList = [
 		floors: '14F + Rock Path 5F',
 		unlock: 'Clear Craggy Coast',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '285',
@@ -304,6 +311,7 @@ export const dungeonList = [
 		floors: '11F + Forest Path 5F',
 		unlock: 'Reach the Fog Lake area by clearing Mt. Horn',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '163',
@@ -385,6 +393,7 @@ export const dungeonList = [
 		floors: '8F + UpperMost Part 7F + Summit',
 		unlock: 'After activating Groudon statue to clear fog at Foggy Forest',
 		boss: 'Uxie',
+		type: [],
 		pokemon: [
 			{
 				id: '083',
@@ -446,6 +455,7 @@ export const dungeonList = [
 		floors: '10F + Interior 8F + Summit',
 		unlock: 'Activate Marill, Azurill event at Kecleon Shop in Treasure Town',
 		boss: 'Manectric and 8 Electrike (Only on first visit)',
+		type: [],
 		pokemon: [
 			{
 				id: '311',
@@ -531,6 +541,7 @@ export const dungeonList = [
 		floors: '15F',
 		unlock: 'Complete several optional missions after Amp Plains',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '104',
@@ -584,6 +595,7 @@ export const dungeonList = [
 		floors: 'B10F + Deepest Part 10F + Underground Lake',
 		unlock: 'Clear Northern Desert and reach the Quicksand Room',
 		boss: 'Mesprit',
+		type: [],
 		pokemon: [
 			{
 				id: '290',
@@ -633,6 +645,7 @@ export const dungeonList = [
 		floors: '11F',
 		unlock: 'Clear Quicksand Cave',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '075',
@@ -678,6 +691,7 @@ export const dungeonList = [
 		floors: '13F + Crystal Lake',
 		unlock: 'Turn all three crystal pillars to blue at Crystal Cave',
 		boss: 'Azelf (No Battle on First Visit)',
+		type: [],
 		pokemon: [
 			{
 				id: '371',
@@ -719,6 +733,7 @@ export const dungeonList = [
 		floors: '8F',
 		unlock: 'Complete several optional missions after clearing Crystal Crossing',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '081',
@@ -760,6 +775,7 @@ export const dungeonList = [
 		floors: '15F',
 		unlock: 'Clear Chasm Cave',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '092',
@@ -801,6 +817,7 @@ export const dungeonList = [
 		floors: 'B8F + Interior B6F + Most Interior Part',
 		unlock: 'Clear Dark Hill',
 		boss: 'Spiritomb',
+		type: [],
 		pokemon: [
 			{
 				id: '089',
@@ -838,6 +855,7 @@ export const dungeonList = [
 		floors: '',
 		unlock: 'Clear Sealed Ruins',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '189',
@@ -863,6 +881,7 @@ export const dungeonList = [
 		floors: '12F',
 		unlock: 'Clear Dusk Forest',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '037',
@@ -896,6 +915,7 @@ export const dungeonList = [
 		floors: '20F + Interior',
 		unlock: 'Clear Deep Dusk Forest and return back to current timeline',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '064',
@@ -937,6 +957,7 @@ export const dungeonList = [
 		floors: 'B9F + Deepest Part B5F + Bottom',
 		unlock: 'Visit Torkoal at the hotsprings via the Waterfall to activate event',
 		boss: 'Kabutops & 2 Omastar',
+		type: [],
 		pokemon: [
 			{
 				id: '086',
@@ -986,6 +1007,7 @@ export const dungeonList = [
 		floors: '15F + 8F + Ancient Ruins',
 		unlock: 'Clear Brine Cave and meet Lapras',
 		boss: 'Dusknoir + 6 Sableye (only on first visit)',
+		type: [],
 		pokemon: [
 			{
 				id: '149',
@@ -1031,6 +1053,7 @@ export const dungeonList = [
 		floors: '13F + Uppermost Part 10F + Summit',
 		unlock: 'Activate the Rainbow Stone Ark at the Ancient Ruins of Hidden Land',
 		boss: 'Dialga (Dark Dialga on first visit)',
+		type: [],
 		pokemon: [
 			{
 				id: '137',
@@ -1084,6 +1107,7 @@ export const dungeonList = [
 		floors: '13F + Interior',
 		unlock: 'First dungeon after end credits',
 		boss: 'Wigglytuff, Chatot, Diglett, Dugtrio, Sunflora, Loudred, Corphish, Chimecho, Croagunk (only on first visit)',
+		type: [],
 		pokemon: [
 			{
 				id: '001',
@@ -1234,6 +1258,7 @@ export const dungeonList = [
 		unlock:
 			'Complete several optional missions, then activate by talking to Mr. Mime in Treasure Town',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '055',
@@ -1299,6 +1324,7 @@ export const dungeonList = [
 		floors: '10F + Deepest Part B14 + Bottom',
 		unlock: 'Clear Blizzard Island',
 		boss: 'Froslass',
+		type: [],
 		pokemon: [
 			{
 				id: '055',
@@ -1413,6 +1439,7 @@ export const dungeonList = [
 		unlock:
 			'Save Scizor at Crevice Cave to earn Secret Rank, complete several optional missions, then activate by talking to Sunflora at Guild',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '073',
@@ -1490,6 +1517,7 @@ export const dungeonList = [
 		floors: 'B18F + Deepest Part B4F + Bottom',
 		unlock: 'Hatch Manaphy and activate event by feeding it two Blue Gummi',
 		boss: 'Gyarados (Only On First Visit)',
+		type: [],
 		pokemon: [
 			{
 				id: '073',
@@ -1609,6 +1637,7 @@ export const dungeonList = [
 		unlock:
 			"Obtain Fione's Water at Miracle Sea to heal Manaphy, complete several optional missions, then activate by finding Team Charms at Guild",
 		boss: "Regice (Regice's Room), Regirock (Regirock's Room), Registeel (Registeel's Room), Regigigas, 4 Hitmonlee, 4 Bronzong (Regigigas's Room)",
+		type: [],
 		pokemon: [
 			{
 				id: '041',
@@ -1767,6 +1796,7 @@ export const dungeonList = [
 		unlock:
 			'Clear Aegis Cave, complete several optional missions, will self-activate one night at the Sharpedo Rock',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '022',
@@ -1860,6 +1890,7 @@ export const dungeonList = [
 		floors: 'B17F',
 		unlock: 'Find Drowzee at Mt. Travail',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '000',
@@ -2013,6 +2044,7 @@ export const dungeonList = [
 		floors: 'B15F + Deepest Part B9F + Bottom',
 		unlock: 'Talk to Lapras at shoreline after clearing The Nightmare',
 		boss: 'Palkia',
+		type: [],
 		pokemon: [
 			{
 				id: '441',
@@ -2130,6 +2162,7 @@ export const dungeonList = [
 		floors: 'B15F + Deepest Part B14F + Bottom',
 		unlock: "Clear Spacial Rift to discover Darkrai's disguise",
 		boss: 'Darkrai, Arbok, Magcargo, Aggron, Mismagius, Rhyperior, Magmortar (only on first visit)',
+		type: [],
 		pokemon: [
 			{
 				id: '004',
@@ -2243,6 +2276,7 @@ export const dungeonList = [
 		floors: 'B30F',
 		unlock: 'Defeat Regigigas at Aegis Cave',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '016',
@@ -2320,6 +2354,7 @@ export const dungeonList = [
 		floors: '19F',
 		unlock: 'Complete several optional missions after Manaphy joins team',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '000',
@@ -2473,6 +2508,7 @@ export const dungeonList = [
 		floors: 'B49F + Bottom',
 		unlock: "Random Spinda's Caf� mission",
 		boss: 'Kyogre',
+		type: [],
 		pokemon: [
 			{
 				id: '073',
@@ -2550,6 +2586,7 @@ export const dungeonList = [
 		floors: '9F + Interior',
 		unlock: "Random Spinda's Caf� mission",
 		boss: 'Groudon',
+		type: [],
 		pokemon: [
 			{
 				id: '023',
@@ -2607,6 +2644,7 @@ export const dungeonList = [
 		floors: '19F + Summit',
 		unlock: "Random Spinda's Caf� mission",
 		boss: 'Articuno',
+		type: [],
 		pokemon: [
 			{
 				id: '055',
@@ -2712,6 +2750,7 @@ export const dungeonList = [
 		floors: '19F + Summit',
 		unlock: "Random Spinda's Caf� mission",
 		boss: 'Heatran',
+		type: [],
 		pokemon: [
 			{
 				id: '004',
@@ -2797,6 +2836,7 @@ export const dungeonList = [
 		floors: 'B29F + Bottom',
 		unlock: "Random Spinda's Caf� mission",
 		boss: 'Giratina',
+		type: [],
 		pokemon: [
 			{
 				id: '276',
@@ -2874,6 +2914,7 @@ export const dungeonList = [
 		floors: '49F + Summit',
 		unlock: "Random Spinda's Caf� mission",
 		boss: 'Rayquaza',
+		type: [],
 		pokemon: [
 			{
 				id: '026',
@@ -3011,6 +3052,7 @@ export const dungeonList = [
 		floors: 'B29F + Interior',
 		unlock: "Random Spinda's Caf� mission",
 		boss: 'Mew',
+		type: [],
 		pokemon: [
 			{
 				id: '001',
@@ -3208,6 +3250,7 @@ export const dungeonList = [
 		floors: 'B8F',
 		unlock: 'Acquired through random Spinda Caf� mission',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '060',
@@ -3237,6 +3280,7 @@ export const dungeonList = [
 		floors: 'B13F',
 		unlock: 'Recycle 3 Items in the Recycle Stand',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '049',
@@ -3274,6 +3318,7 @@ export const dungeonList = [
 		floors: '6F',
 		unlock: 'Acquired through random Spinda Caf� mission',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '102',
@@ -3311,6 +3356,7 @@ export const dungeonList = [
 		floors: '',
 		unlock: 'Recycle 6 Items in the Recycle Stand',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '188',
@@ -3332,6 +3378,7 @@ export const dungeonList = [
 		floors: 'B10F',
 		unlock: "Random Spinda's Caf� mission",
 		boss: 'Gabite',
+		type: [],
 		pokemon: [
 			{
 				id: '030',
@@ -3361,6 +3408,7 @@ export const dungeonList = [
 		floors: '5F',
 		unlock: 'Recycle 60 Items in the Recycle Stand',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '010',
@@ -3398,6 +3446,7 @@ export const dungeonList = [
 		floors: 'B25F',
 		unlock: 'Recycle 100 Items in the Recycle Stand',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '007',
@@ -3503,6 +3552,7 @@ export const dungeonList = [
 		floors: 'B20F',
 		unlock: 'Acquired through random Spinda Caf� mission',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '011',
@@ -3596,6 +3646,7 @@ export const dungeonList = [
 		floors: '20F',
 		unlock: 'Acquired through random Spinda Caf� mission',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '018',
@@ -3657,6 +3708,7 @@ export const dungeonList = [
 		floors: '18F',
 		unlock: 'Acquired through optional rescue missions',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '057',
@@ -3734,6 +3786,7 @@ export const dungeonList = [
 		floors: 'B18F',
 		unlock: 'Acquired through random Spinda Caf� mission',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '063',
@@ -3803,6 +3856,7 @@ export const dungeonList = [
 		floors: 'B25F',
 		unlock: 'Acquired through optional rescue missions',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '015',
@@ -3872,6 +3926,7 @@ export const dungeonList = [
 		floors: '',
 		unlock: 'Beat Guild Members at Mystifying Forest',
 		boss: 'None',
+		type: [],
 		pokemon: []
 	},
 	{
@@ -3880,6 +3935,7 @@ export const dungeonList = [
 		floors: '',
 		unlock: 'Beat Guild Members at Mystifying Forest',
 		boss: 'None',
+		type: [],
 		pokemon: []
 	},
 	{
@@ -3888,6 +3944,7 @@ export const dungeonList = [
 		floors: '',
 		unlock: 'Beat Guild Members at Mystifying Forest',
 		boss: 'None',
+		type: [],
 		pokemon: []
 	},
 	{
@@ -3896,6 +3953,7 @@ export const dungeonList = [
 		floors: '',
 		unlock: 'Beat Guild Members at Mystifying Forest',
 		boss: 'None',
+		type: [],
 		pokemon: []
 	},
 	{
@@ -3904,6 +3962,7 @@ export const dungeonList = [
 		floors: 'None',
 		unlock: 'Beat Guild Members at Mystifying Forest',
 		boss: 'None',
+		type: [],
 		pokemon: []
 	},
 	{
@@ -3912,6 +3971,7 @@ export const dungeonList = [
 		floors: 'None',
 		unlock: 'Activate gem at B9F of Waterfall',
 		boss: 'None',
+		type: [],
 		pokemon: []
 	},
 	{
@@ -3922,6 +3982,7 @@ export const dungeonList = [
 		unlock:
 			'Complete several optional missions, then unlock Shaymin Village by talking to Mr. Mime and Octillery outside Spinda Caf�',
 		boss: 'Carnivine x 5 (Camp 5), Grimer/Muk x Multiple (Summit)',
+		type: [],
 		pokemon: [
 			{
 				id: '011',
@@ -4012,6 +4073,7 @@ export const dungeonList = [
 		floors: "Complete Special Episode 1, Accept Jirachi's Challenge Request at Spinda Caf�",
 		unlock: "Complete Special Episode 1, Accept Jirachi's Challenge Request at Spinda Caf�",
 		boss: 'Jirachi',
+		type: [],
 		pokemon: [
 			{
 				id: '060',
@@ -4065,6 +4127,7 @@ export const dungeonList = [
 		floors: 'Reach Master * Rank<b>',
 		unlock: 'Reach Master * Rank<b>',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '015',
@@ -4126,6 +4189,7 @@ export const dungeonList = [
 		floors: 'Reach Master ** Rank<b>',
 		unlock: 'Reach Master ** Rank<b>',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '055',
@@ -4211,6 +4275,7 @@ export const dungeonList = [
 		floors: 'Reach Master *** Rank<b>',
 		unlock: 'Reach Master *** Rank<b>',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '056',
@@ -4304,6 +4369,7 @@ export const dungeonList = [
 		floors: 'Reach GuildMaster Rank<b>',
 		unlock: 'Reach GuildMaster Rank<b>',
 		boss: 'None',
+		type: [],
 		pokemon: [
 			{
 				id: '037',
@@ -4405,6 +4471,7 @@ export const dungeonList = [
 		floors: 'Recycle 150 times at Recycle Stand',
 		unlock: 'Recycle 150 times at Recycle Stand',
 		boss: 'None',
+		type: [],
 		pokemon: []
 	},
 	{
@@ -4413,6 +4480,7 @@ export const dungeonList = [
 		floors: 'Randomly at Spinda Drink Stand',
 		unlock: 'Randomly at Spinda Drink Stand',
 		boss: 'None',
+		type: [],
 		pokemon: []
 	}
 ];
