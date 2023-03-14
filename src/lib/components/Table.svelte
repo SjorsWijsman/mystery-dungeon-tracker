@@ -1,9 +1,9 @@
 <script>
-	import { recruitedPokemon } from '$lib/store';
+	import { recruitedPokemon, completedDungeons } from '$lib/store';
 	import Sort from '$lib/components/Sort.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import Type from '$lib/components/Type.svelte';
-	import Recruited from '$lib/components/Recruited.svelte';
+	import Completed from '$lib/components/Completed.svelte';
 	import Portrait from '$lib/components/Portrait.svelte';
 	import Fa from 'svelte-fa';
 
@@ -20,10 +20,11 @@
 
 	function sortData() {
 		// Different logic for recruited sort
-		if (sort.column === 'recruited') {
+		if (sort.column === 'completed') {
 			sortedData = [...data]
 				.map((item) => {
-					item.recruited = $recruitedPokemon.includes(item.id);
+					if (type === 'dungeons') item.completed = $completedDungeons.includes(item.id);
+					else item.completed = $recruitedPokemon.includes(item.id);
 					return item;
 				})
 				.sort((a, b) => compare(b, a));
@@ -46,7 +47,11 @@
 
 	// Resort data on recruitedpokemon change
 	recruitedPokemon.subscribe(() => {
-		if (sort.column === 'recruited') sortData();
+		if (sort.column === 'completed') sortData();
+	});
+
+	completedDungeons.subscribe(() => {
+		if (sort.column === 'completed') sortData();
 	});
 </script>
 
@@ -86,8 +91,8 @@
 							</Link>
 						{:else if header.type === 'type'}
 							<Type types={item[header.column]} />
-						{:else if header.type === 'recruited'}
-							<Recruited id={item.id} hideLabel={true} />
+						{:else if header.type === 'completed'}
+							<Completed id={item.id} hideLabel={true} {type} />
 						{:else}
 							{item[header.column]}
 						{/if}

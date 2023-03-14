@@ -1,6 +1,6 @@
 <script>
 	import { base } from '$app/paths';
-	import { recruitedPokemon } from '$lib/store';
+	import { recruitedPokemon, completedDungeons } from '$lib/store';
 	export let completed = false;
 	export let id;
 	export let size = 2;
@@ -9,6 +9,7 @@
 	let recruitedId;
 
 	$: if (type === 'pokedex') completed = $recruitedPokemon.includes(id);
+	$: if (type === 'dungeons') completed = $completedDungeons.includes(id);
 
 	$: if (completed) {
 		switch (id) {
@@ -68,9 +69,6 @@
 		transition: all 0.2s ease-out;
 		background-color: var(--color-black-light);
 		outline: 0px solid var(--color-gold);
-	}
-
-	div.pokemon {
 		transform: scaleX(-1);
 	}
 

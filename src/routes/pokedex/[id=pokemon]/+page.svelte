@@ -1,6 +1,6 @@
 <script>
 	import Type from '$lib/components/Type.svelte';
-	import Recruited from '$lib/components/Recruited.svelte';
+	import Completed from '$lib/components/Completed.svelte';
 	import { pageColor } from '$lib/store';
 	import Portrait from '$lib/components/Portrait.svelte';
 
@@ -10,7 +10,7 @@
 </script>
 
 <div class="above-section">
-	<Recruited id={data.id} />
+	<Completed id={data.id} />
 </div>
 <section>
 	<Portrait id={data.id} size={4} />

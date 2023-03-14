@@ -31,11 +31,11 @@
 			type: 'type'
 		},
 		{
-			column: 'recruited',
+			column: 'completed',
 			title: 'Recruited',
 			sortable: true,
 			icon: faHeart,
-			type: 'recruited'
+			type: 'completed'
 		}
 	];
 </script>

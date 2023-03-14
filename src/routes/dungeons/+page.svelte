@@ -1,6 +1,6 @@
 <script>
 	import Table from '$lib/components/Table.svelte';
-	import { faLocationDot, faStairs } from '@fortawesome/free-solid-svg-icons';
+	import { faLocationDot, faStairs, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 	export let data;
 
@@ -10,12 +10,19 @@
 			title: 'Dungeon',
 			icon: faLocationDot,
 			type: 'link'
-		}
+		},
 		// {
 		// 	column: 'floors',
 		// 	title: 'Floors',
 		// 	icon: faStairs
 		// }
+		{
+			column: 'completed',
+			title: 'Completed',
+			sortable: true,
+			icon: faHeart,
+			type: 'completed'
+		}
 	];
 </script>
 
