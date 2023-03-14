@@ -9,7 +9,5 @@ export function load({ params }) {
 			...pokemonList.find((pokemonData) => pokemonData.id === item.id)
 		};
 	});
-	console.log(pokemonList);
-	console.log(dungeon);
 	return dungeon;
 }

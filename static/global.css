@@ -251,6 +251,10 @@ th {
 	font-weight: 400;
 }
 
+tr {
+	height: 2.5rem;
+}
+
 thead {
 	position: sticky;
 	top: calc(5rem - 1px);

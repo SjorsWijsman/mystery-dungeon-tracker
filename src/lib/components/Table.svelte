@@ -7,8 +7,8 @@
 	import Portrait from '$lib/components/Portrait.svelte';
 	import Fa from 'svelte-fa';
 
-	export let headers;
-	export let data;
+	export let headers = [];
+	export let data = [];
 	export let showIcons = false;
 	export let type = 'pokedex';
 
@@ -16,7 +16,8 @@
 		column: 'id',
 		ascending: true
 	};
-	let sortedData = data;
+
+	let sortedData = [...data];
 
 	function sortData() {
 		// Different logic for recruited sort
@@ -57,22 +58,26 @@
 
 <table>
 	<thead>
-		<tr>
-			{#if showIcons}
-				<th class="icons" />
-			{/if}
-			{#each headers as header}
-				<th class:hasIcon={header.icon} class:sortable={header.sortable}>
-					<div>
-						<Fa icon={header.icon} />
-						<span>{header.title}</span>
-						{#if header.sortable}
-							<Sort column={header.column} bind:sort on:sorted={sortData} />
-						{/if}
-					</div>
-				</th>
-			{/each}
-		</tr>
+		{#if headers.length > []}
+			<tr>
+				{#if showIcons}
+					<th class="icons" />
+				{/if}
+				{#each headers as header}
+					<th class:hasIcon={header.icon} class:sortable={header.sortable}>
+						<div>
+							<Fa icon={header.icon} />
+							<span>{header.title}</span>
+							{#if header.sortable}
+								<Sort column={header.column} bind:sort on:sorted={sortData} />
+							{/if}
+						</div>
+					</th>
+				{/each}
+			</tr>
+		{:else}
+			<tr><th>Please supply headers to display</th></tr>
+		{/if}
 	</thead>
 
 	<tbody>
@@ -99,6 +104,8 @@
 					</td>
 				{/each}
 			</tr>
+		{:else}
+			<tr><td>No data available to display</td></tr>
 		{/each}
 	</tbody>
 </table>

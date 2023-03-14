@@ -11,11 +11,6 @@
 			icon: faLocationDot,
 			type: 'link'
 		},
-		// {
-		// 	column: 'floors',
-		// 	title: 'Floors',
-		// 	icon: faStairs
-		// }
 		{
 			column: 'completed',
 			title: 'Completed',

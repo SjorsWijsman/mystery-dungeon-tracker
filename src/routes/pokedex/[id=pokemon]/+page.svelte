@@ -3,10 +3,30 @@
 	import Completed from '$lib/components/Completed.svelte';
 	import { pageColor } from '$lib/store';
 	import Portrait from '$lib/components/Portrait.svelte';
+	import Table from '$lib/components/Table.svelte';
+	import { faLocationDot, faStairs } from '@fortawesome/free-solid-svg-icons';
 
 	export let data;
 
 	$pageColor = [...data.type].map((type) => `--color-${type}`);
+
+	console.log(data.foundIn);
+
+	const headers = [
+		{
+			column: 'title',
+			title: 'Dungeon',
+			icon: faLocationDot,
+			sortable: true,
+			type: 'link'
+		},
+		{
+			column: 'floors',
+			title: 'Found On',
+			icon: faStairs,
+			sortable: true
+		}
+	];
 </script>
 
 <div class="above-section">
@@ -18,6 +38,10 @@
 </section>
 <section>
 	<Type types={data.type} />
+	<h2>Found in</h2>
+	{#key data.foundIn}
+		<Table {headers} data={data.foundIn} showIcons={true} type={'dungeons'} />
+	{/key}
 </section>
 
 <style>

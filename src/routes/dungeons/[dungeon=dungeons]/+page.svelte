@@ -36,6 +36,7 @@
 		{
 			column: 'floors',
 			title: 'Floors',
+			sortable: true,
 			icon: faStairs
 		},
 		{

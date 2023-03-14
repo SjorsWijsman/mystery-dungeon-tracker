@@ -445,7 +445,7 @@ export const dungeonList = [
 			},
 			{
 				id: '480',
-				floors: 'Summit<br>(Obtainable After Credits Roll)'
+				floors: 'Summit (Obtainable After Credits Roll)'
 			}
 		]
 	},
@@ -487,7 +487,7 @@ export const dungeonList = [
 			},
 			{
 				id: '145',
-				floors: '7F<br> (Requires Secret Slab or Enigma Part)'
+				floors: '7F (Requires Secret Slab or Enigma Part)'
 			},
 			{
 				id: '180',
@@ -635,7 +635,7 @@ export const dungeonList = [
 			},
 			{
 				id: '481',
-				floors: 'Underground Lake<br>(Obtainable After Credits Roll)'
+				floors: 'Underground Lake (Obtainable After Credits Roll)'
 			}
 		]
 	},
@@ -723,7 +723,7 @@ export const dungeonList = [
 			},
 			{
 				id: '482',
-				floors: 'Crystal Lake<br>(Obtainable After Credits Roll)'
+				floors: 'Crystal Lake (Obtainable After Credits Roll)'
 			}
 		]
 	},
@@ -1093,11 +1093,11 @@ export const dungeonList = [
 			},
 			{
 				id: '483',
-				floors: 'Summit<br>(Only First Time)'
+				floors: 'Summit (Only First Time)'
 			},
 			{
 				id: '483',
-				floors: 'Summit<br>(Obtainable After Credits Roll)'
+				floors: 'Summit (Obtainable After Credits Roll)'
 			}
 		]
 	},
@@ -1243,11 +1243,11 @@ export const dungeonList = [
 			},
 			{
 				id: '251',
-				floors: '     B10F<br> (Requires Secret Slab or Enigma Part)'
+				floors: '     B10F (Requires Secret Slab or Enigma Part)'
 			},
 			{
 				id: '491',
-				floors: '     B13F<br> (Requires Secret Slab or Enigma Part)'
+				floors: '     B13F (Requires Secret Slab or Enigma Part)'
 			}
 		]
 	},
@@ -1428,7 +1428,7 @@ export const dungeonList = [
 			},
 			{
 				id: '491',
-				floors: '     DPB2F<br> (Requires Secret Slab or Enigma Part)'
+				floors: '     DPB2F (Requires Secret Slab or Enigma Part)'
 			}
 		]
 	},
@@ -1507,7 +1507,7 @@ export const dungeonList = [
 			},
 			{
 				id: '249',
-				floors: '     B18F<br> (Requires Secret Slab or Enigma Part)'
+				floors: '     B18F (Requires Secret Slab or Enigma Part)'
 			}
 		]
 	},
@@ -1621,11 +1621,11 @@ export const dungeonList = [
 			},
 			{
 				id: '491',
-				floors: '     B3F<br> (Requires Secret Slab or Enigma Part)'
+				floors: '     B3F (Requires Secret Slab or Enigma Part)'
 			},
 			{
 				id: '489',
-				floors: '     Bottom<br> (Automatically on second visit)'
+				floors: '     Bottom (Automatically on second visit)'
 			}
 		]
 	},
@@ -1773,19 +1773,19 @@ export const dungeonList = [
 			},
 			{
 				id: '378',
-				floors: "     Regice's Room<br>(On Second & Subsequent Visits)"
+				floors: "Regice's Room (On Second & Subsequent Visits)"
 			},
 			{
 				id: '377',
-				floors: "     Regirock's Room<br>(On Second & Subsequent Visits)"
+				floors: "Regirock's Room (On Second & Subsequent Visits)"
 			},
 			{
 				id: '379',
-				floors: "     Registeel's Room<br>(On Second & Subsequent Visits)"
+				floors: "Registeel's Room (On Second & Subsequent Visits)"
 			},
 			{
 				id: '486',
-				floors: "     Regigigas' Room<br>(On Second & Subsequent Visits)"
+				floors: "Regigigas' Room (On Second & Subsequent Visits)"
 			}
 		]
 	},
@@ -1880,7 +1880,7 @@ export const dungeonList = [
 			},
 			{
 				id: '491',
-				floors: '     17F<br> (Requires Secret Slab or Enigma Part)'
+				floors: '     17F (Requires Secret Slab or Enigma Part)'
 			}
 		]
 	},
@@ -2112,7 +2112,7 @@ export const dungeonList = [
 			},
 			{
 				id: '380',
-				floors: 'B10F<br> (Requires Secret Slab or Enigma Part)'
+				floors: 'B10F (Requires Secret Slab or Enigma Part)'
 			},
 			{
 				id: '357',
@@ -2120,7 +2120,7 @@ export const dungeonList = [
 			},
 			{
 				id: '491',
-				floors: 'B14F<br> (Requires Secret Slab or Enigma Part)'
+				floors: 'B14F (Requires Secret Slab or Enigma Part)'
 			},
 			{
 				id: '477',
@@ -2140,7 +2140,7 @@ export const dungeonList = [
 			},
 			{
 				id: '381',
-				floors: 'DPB5F<br> (Requires Secret Slab or Enigma Part)'
+				floors: 'DPB5F (Requires Secret Slab or Enigma Part)'
 			},
 			{
 				id: '097',
@@ -2152,7 +2152,7 @@ export const dungeonList = [
 			},
 			{
 				id: '484',
-				floors: 'Bottom<br>(On Second & Subsequent Visits)'
+				floors: 'Bottom (On Second & Subsequent Visits)'
 			}
 		]
 	},
@@ -3224,7 +3224,7 @@ export const dungeonList = [
 			},
 			{
 				id: '428',
-				floors: 'B1F-B29F<br>(Dark Only)'
+				floors: 'B1F-B29F(Dark Only)'
 			},
 			{
 				id: '434',
@@ -3346,7 +3346,7 @@ export const dungeonList = [
 			},
 			{
 				id: '412',
-				floors: '1F-5F<br>(Dark Only)'
+				floors: '1F-5F(Dark Only)'
 			}
 		]
 	},
@@ -3398,7 +3398,7 @@ export const dungeonList = [
 			},
 			{
 				id: '444',
-				floors: 'B10F<br>(Cannot Recruit'
+				floors: 'B10F(Cannot Recruit'
 			}
 		]
 	},
@@ -3436,7 +3436,7 @@ export const dungeonList = [
 			},
 			{
 				id: '412',
-				floors: '1F-4F<br>(Dark Only)'
+				floors: '1F-4F(Dark Only)'
 			}
 		]
 	},
@@ -3636,7 +3636,7 @@ export const dungeonList = [
 			},
 			{
 				id: '380',
-				floors: 'B10F<br>(Requires Secret Slab or Enigma Part)'
+				floors: 'B10F(Requires Secret Slab or Enigma Part)'
 			}
 		]
 	},
@@ -3698,7 +3698,7 @@ export const dungeonList = [
 			},
 			{
 				id: '250',
-				floors: '19F<br> (Requires Secret Slab or Enigma Part)'
+				floors: '19F (Requires Secret Slab or Enigma Part)'
 			}
 		]
 	},
@@ -3776,7 +3776,7 @@ export const dungeonList = [
 			},
 			{
 				id: '386',
-				floors: '17F<br> (Requires Secret Slab or Enigma Part)'
+				floors: '17F (Requires Secret Slab or Enigma Part)'
 			}
 		]
 	},
@@ -3916,7 +3916,7 @@ export const dungeonList = [
 			},
 			{
 				id: '381',
-				floors: 'B24F<br> (Requires Secret Slab or Enigma Part)'
+				floors: 'B24F (Requires Secret Slab or Enigma Part)'
 			}
 		]
 	},
