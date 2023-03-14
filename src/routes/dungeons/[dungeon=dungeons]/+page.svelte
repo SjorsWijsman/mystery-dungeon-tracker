@@ -1,5 +1,6 @@
 <script>
 	import Portrait from '$lib/components/Portrait.svelte';
+	import Recruited from '$lib/components/Recruited.svelte';
 	import { faStairs } from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa';
 
@@ -8,6 +9,9 @@
 	console.log(data);
 </script>
 
+<div class="above-section">
+	<Recruited id={data.id} />
+</div>
 <section>
 	<Portrait id={data.id} size={4} type={'dungeons'} />
 	<h1>{data.title} <span><Fa icon={faStairs} />{data.floors}</span></h1>
@@ -21,6 +25,15 @@
 </section>
 
 <style>
+	div.above-section {
+		position: absolute;
+		top: -1.5rem;
+		right: 2rem;
+		border-radius: 0.3rem;
+		background-color: var(--color-black);
+		padding: 0.5rem 0.8rem;
+	}
+
 	section {
 		display: flex;
 		align-items: center;

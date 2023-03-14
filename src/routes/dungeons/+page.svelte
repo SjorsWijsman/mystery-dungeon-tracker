@@ -20,4 +20,5 @@
 </script>
 
 <h1>Dungeons</h1>
+<h2>Dungeon List</h2>
 <Table data={data.dungeonList} {headers} showIcons={true} type={'dungeons'} />
