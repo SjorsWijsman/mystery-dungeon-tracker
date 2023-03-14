@@ -2,7 +2,7 @@
 	import Type from '$lib/components/Type.svelte';
 	import Recruited from '$lib/components/Recruited.svelte';
 	import { pageColor } from '$lib/store';
-	import Portrait from '../../../lib/components/Portrait.svelte';
+	import Portrait from '$lib/components/Portrait.svelte';
 
 	export let data;
 

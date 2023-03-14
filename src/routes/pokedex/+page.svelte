@@ -1,8 +1,6 @@
 <script>
 	import TablePokemon from '$lib/components/TablePokemon.svelte';
 	import { pageColor, recruitedPokemon } from '$lib/store';
-	import { faStar } from '@fortawesome/free-solid-svg-icons';
-	import Fa from 'svelte-fa';
 
 	export let data;
 

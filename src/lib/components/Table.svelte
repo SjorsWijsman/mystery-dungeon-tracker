@@ -10,6 +10,7 @@
 	export let headers;
 	export let data;
 	export let showIcons = false;
+	export let type = 'pokedex';
 
 	let sort = {
 		column: 'id',
@@ -74,13 +75,13 @@
 			<tr id={item.id}>
 				{#if showIcons}
 					<td class="icons">
-						<Portrait id={item.id} />
+						<Portrait id={item.id} {type} />
 					</td>
 				{/if}
 				{#each headers as header}
 					<td>
 						{#if header.type === 'link'}
-							<Link path="pokedex/{item.id}">
+							<Link path="{type}/{item.id}">
 								{item[header.column]}
 							</Link>
 						{:else if header.type === 'type'}

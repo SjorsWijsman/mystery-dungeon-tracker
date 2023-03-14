@@ -243,6 +243,8 @@ th,
 td {
 	background-color: var(--color-black);
 	padding: 0.3rem;
+	padding-left: calc(0.3rem + 0.5px);
+	padding-bottom: calc(0.3rem + 0.5px);
 	vertical-align: center;
 	box-shadow: inset 1px -1px var(--color-black-light);
 }

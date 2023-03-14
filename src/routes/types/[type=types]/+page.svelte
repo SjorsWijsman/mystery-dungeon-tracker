@@ -5,12 +5,7 @@
 	import { typeList } from '$lib/data/types';
 	import { page } from '$app/stores';
 	import { pageColor } from '$lib/store';
-	import {
-		faAngleDoubleDown,
-		faAngleDown,
-		faAngleUp,
-		faBolt
-	} from '@fortawesome/free-solid-svg-icons';
+	import { faAngleDoubleDown, faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
 	export let data;
 

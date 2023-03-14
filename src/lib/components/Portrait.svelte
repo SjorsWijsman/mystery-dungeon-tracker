@@ -3,6 +3,9 @@
 	export let recruited;
 	export let id;
 	export let size = 2;
+	export let type = 'pokedex';
+
+	console.log(type);
 
 	let recruitedId;
 
@@ -34,14 +37,16 @@
 </script>
 
 <div class:recruited style:width="{size}rem" style:height="{size}rem">
-	<img src="https://www.serebii.net/dungeonsky/headshot/{id}.png" alt="Portrait" />
-	{#if recruited}
-		<img
-			src="https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0{recruitedId}/Joyous.png"
-			alt="Portrait"
-			class="recruited"
-			onerror="this.style.display='none'"
-		/>
+	{#if type === 'pokedex'}
+		<img src="https://www.serebii.net/dungeonsky/headshot/{id}.png" alt="Portrait" />
+		{#if recruited}
+			<img
+				src="https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0{recruitedId}/Joyous.png"
+				alt="Portrait"
+				class="recruited"
+				onerror="this.style.display='none'"
+			/>
+		{/if}
 	{/if}
 </div>
 
