@@ -5,6 +5,7 @@
 	import Type from '$lib/components/Type.svelte';
 	import Completed from '$lib/components/Completed.svelte';
 	import Portrait from '$lib/components/Portrait.svelte';
+	import Effectiveness from '$lib/components/Effectiveness.svelte';
 	import Fa from 'svelte-fa';
 
 	export let headers = [];
@@ -64,7 +65,11 @@
 					<th class="icons" />
 				{/if}
 				{#each headers as header}
-					<th class:hasIcon={header.icon} class:sortable={header.sortable}>
+					<th
+						class:hasIcon={header.icon}
+						class:sortable={header.sortable}
+						class:vertical={header.vertical}
+					>
 						<div>
 							<Fa icon={header.icon} />
 							<span>{header.title}</span>
@@ -98,6 +103,8 @@
 							<Type types={item[header.column]} />
 						{:else if header.type === 'completed'}
 							<Completed id={item.id} hideLabel={true} {type} />
+						{:else if header.type === 'effectiveness'}
+							<Effectiveness value={item[header.column]} />
 						{:else}
 							{item[header.column]}
 						{/if}

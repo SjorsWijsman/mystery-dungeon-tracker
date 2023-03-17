@@ -3,7 +3,7 @@ export const dungeonList = [
 		id: '01',
 		title: 'Beach Cave',
 		floors: 'B4F + Bottom',
-		unlock: 'First dungeon in game',
+		unlock: 'First dungeon in the game.',
 		boss: 'Zubat, Koffing (only on first visit)',
 		type: [],
 		pokemon: [
@@ -29,7 +29,7 @@ export const dungeonList = [
 		id: '02',
 		title: 'Drenched Bluff',
 		floors: 'B7F',
-		unlock: "After joining Wigglytuff's Guild",
+		unlock: "After joining Wigglytuff's Guild.",
 		boss: 'None',
 		type: [],
 		pokemon: [
@@ -42,7 +42,7 @@ export const dungeonList = [
 				floors: 'B1F-B6F'
 			},
 			{
-				id: '422',
+				id: '422W',
 				floors: 'B1F-B6F'
 			},
 			{
@@ -55,8 +55,8 @@ export const dungeonList = [
 		id: '03',
 		title: 'Mt. Bristle',
 		floors: '9F + Summit',
-		unlock: 'Activate Drowzee event at Kecleon Shop in Treasure Town',
-		boss: 'Drowzee (Only on first Visit)',
+		unlock: 'Activate Drowzee event at Kecleon Shop in Treasure Town.',
+		boss: 'Drowzee (Only on first visit)',
 		type: [],
 		pokemon: [
 			{
@@ -93,7 +93,7 @@ export const dungeonList = [
 		id: '04',
 		title: 'Waterfall',
 		floors: 'B9F',
-		unlock: "Complete several optional missions after the watchman's work",
+		unlock: "Complete several optional missions after the watchman's work.",
 		boss: 'None',
 		type: [],
 		pokemon: [
@@ -200,13 +200,13 @@ export const dungeonList = [
 	{
 		id: '06',
 		title: 'Craggy Coast',
-		floors: 'B9F + Small PathB5F',
+		floors: 'B9F',
 		unlock: 'Complete several optional missions after the Apple Woods mission',
 		boss: 'None',
 		type: [],
 		pokemon: [
 			{
-				id: '000',
+				id: '363',
 				floors: 'B1F-B9F'
 			},
 			{
@@ -228,25 +228,13 @@ export const dungeonList = [
 			{
 				id: '364',
 				floors: 'B6F-B9F'
-			},
-			{
-				id: '278',
-				floors: 'B1F-B5F'
-			},
-			{
-				id: '363',
-				floors: 'B1F-B5F'
-			},
-			{
-				id: '423',
-				floors: 'B1F-B5F'
 			}
 		]
 	},
 	{
 		id: '07',
 		title: 'Mt. Horn',
-		floors: '14F + Rock Path 5F',
+		floors: '14F',
 		unlock: 'Clear Craggy Coast',
 		boss: 'None',
 		type: [],
@@ -290,25 +278,13 @@ export const dungeonList = [
 			{
 				id: '438',
 				floors: '8F-14F'
-			},
-			{
-				id: '177',
-				floors: 'B1F-B5F'
-			},
-			{
-				id: '285',
-				floors: 'B1F-B5F'
-			},
-			{
-				id: '438',
-				floors: 'B1F-B5F'
 			}
 		]
 	},
 	{
 		id: '08',
 		title: 'Foggy Forest',
-		floors: '11F + Forest Path 5F',
+		floors: '11F',
 		unlock: 'Reach the Fog Lake area by clearing Mt. Horn',
 		boss: 'None',
 		type: [],
@@ -360,30 +336,6 @@ export const dungeonList = [
 			{
 				id: '286',
 				floors: '7F-11F'
-			},
-			{
-				id: '127',
-				floors: '1F-5F'
-			},
-			{
-				id: '206',
-				floors: '1F-5F'
-			},
-			{
-				id: '220',
-				floors: '1F-5F'
-			},
-			{
-				id: '228',
-				floors: '1F-5F'
-			},
-			{
-				id: '264',
-				floors: '1F-5F'
-			},
-			{
-				id: '401',
-				floors: '1F-5F'
 			}
 		]
 	},
