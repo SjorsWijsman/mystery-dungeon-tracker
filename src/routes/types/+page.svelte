@@ -1,5 +1,6 @@
 <script>
 	import Table from '$lib/components/Table.svelte';
+	import Type from '$lib/components/Type.svelte';
 	import { faArrowDownLong, faArrowRightLong, faBolt } from '@fortawesome/free-solid-svg-icons';
 	import { pageColor } from '$lib/store';
 	import Fa from 'svelte-fa';
@@ -50,6 +51,11 @@
 </script>
 
 <h1>Types</h1>
+<div class="type-list">
+	{#each types as type}
+		<Type types={type} />
+	{/each}
+</div>
 <h2>Effectiveness Chart</h2>
 <p>
 	<span><Fa icon={faArrowDownLong} />Attacking</span>
@@ -58,10 +64,16 @@
 <Table data={matrixChart} headers={matrixHeaders} />
 
 <style>
+	div.type-list {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+	}
 	p {
 		display: flex;
 		gap: 2rem;
 	}
+
 	p span {
 		display: flex;
 		gap: 0.6rem;
