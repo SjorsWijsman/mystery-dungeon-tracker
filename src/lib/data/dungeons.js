@@ -1045,10 +1045,6 @@ export const dungeonList = [
 			},
 			{
 				id: '483',
-				floors: 'Summit (Only First Time)'
-			},
-			{
-				id: '483',
 				floors: 'Summit (Obtainable After Credits Roll)'
 			}
 		]
@@ -1612,115 +1608,115 @@ export const dungeonList = [
 				floors: 'DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201A',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201B',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201C',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201D',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201E',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201F',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201G',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201H',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201I',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201J',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201K',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201L',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201M',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201N',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201O',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201P',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201Q',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201R',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201S',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201T',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201U',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201V',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201W',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201X',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201Y',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201Z',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201_ex',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
-				id: '201',
+				id: '201_qu',
 				floors: 'IMB1F-B3F, RMB1F-B3F, SMB1F-B4F, DPB1F-B5F'
 			},
 			{
@@ -1845,7 +1841,7 @@ export const dungeonList = [
 		type: [],
 		pokemon: [
 			{
-				id: '000',
+				id: '035',
 				floors: 'B1F-B17F'
 			},
 			{
@@ -2309,7 +2305,7 @@ export const dungeonList = [
 		type: [],
 		pokemon: [
 			{
-				id: '000',
+				id: '035',
 				floors: 'B1F-B19F'
 			},
 			{

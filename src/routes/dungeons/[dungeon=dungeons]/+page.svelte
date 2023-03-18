@@ -72,7 +72,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<h2>Pokemon</h2>
+	<h2>Pokémon Found <span>({pokemonList.length})</span></h2>
 	{#key pokemonList}
 		<Table {headers} data={pokemonList} showIcons={true} />
 	{/key}

@@ -5,6 +5,7 @@
 	import Type from '$lib/components/Type.svelte';
 	import Completed from '$lib/components/Completed.svelte';
 	import Portrait from '$lib/components/Portrait.svelte';
+	import PortraitList from '$lib/components/PortraitList.svelte';
 	import Effectiveness from '$lib/components/Effectiveness.svelte';
 	import Fa from 'svelte-fa';
 
@@ -103,6 +104,8 @@
 							<Type types={item[header.column]} />
 						{:else if header.type === 'completed'}
 							<Completed id={item.id} hideLabel={true} {type} />
+						{:else if header.type === 'portraitList'}
+							<PortraitList ids={item[header.column]} type={header.portraitType ?? type} />
 						{:else if header.type === 'effectiveness'}
 							<Effectiveness value={item[header.column]} />
 						{:else}
